@@ -1538,6 +1538,7 @@ public class Twitch {
         request.setValueToJSONContentType()
         request.httpMethod = httpMethod
         request.httpBody = bodyParameters?.getAsData()
+        request.setValue(tokenManager.clientId, forHTTPHeaderField: "client-id")
 
         urlSessionForWrapper.dataTask(with: request) { (data, response, error) in
             guard let nonNilData = data, let dataAsDictionary = nonNilData.getAsDictionary(),

@@ -27,6 +27,7 @@ public class TwitchTokenManager {
 
     /// `accessToken` should specify the access token of the New Twitch API.
     public var accessToken: String? = nil
+    public var clientId: String? = nil
 
     // TODO: This maybe should require parameters?
     /// Initializes a TwitchTokenManager.
